@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <extension key="nl.pum.postalcode" type="module">
   <file>postalcode</file>
-  <name>FIXME</name>
-  <description>FIXME</description>
-  <license>FIXME</license>
+  <name>nl.pum.postalcode</name>
+  <description>Import postal code table in CiviCRM</description>
+  <license>PUM</license>
   <maintainer>
-    <author>FIXME</author>
-    <email>FIXME@example.com</email>
+    <author>Ruud</author>
+    <email>helpdesk@pum.nl</email>
   </maintainer>
   <releaseDate>2014-01-14</releaseDate>
   <version>1.0</version>

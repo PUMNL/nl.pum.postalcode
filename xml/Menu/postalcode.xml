@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/postalcodetable_import</path>
+    <page_callback>CRM_Postalcode_Page_Postalcodetable_import</page_callback>
+    <title>Postalcodetable_import</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/postalcodetable_clear</path>
+    <page_callback>CRM_Postalcode_Page_Postalcodetable_clear</page_callback>
+    <title>Postalcodetable_clear</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
