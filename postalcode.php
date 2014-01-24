@@ -94,8 +94,8 @@ function postalcode_civicrm_navigationMenu( &$params ) {
 			'1' => array (
 				'attributes' => array (
 					'label'      => 'Import Postalcode Table',
-					'name'       => 'Postalcodetable_import',
-					'url'        => 'civicrm/Postalcodetable_import',
+					'name'       => 'Postalcodetableimport',
+					'url'        => 'civicrm/postalcodetable/import',
 					'permission' => 'administer CiviCRM',
 					'operator'   => null,
 					'separator'  => 1,
@@ -108,8 +108,8 @@ function postalcode_civicrm_navigationMenu( &$params ) {
 			'2' => array (
 				'attributes' => array (
 					'label'      => 'Clear Postalcode Table',
-					'name'       => 'Postalcodetable_clear',
-					'url'        => 'civicrm/Postalcodetable_clear',
+					'name'       => 'Postalcodetableclear',
+					'url'        => 'civicrm/postalcodetable/clear',
 					'permission' => 'administer CiviCRM',
 					'operator'   => null,
 					'separator'  => 1,
