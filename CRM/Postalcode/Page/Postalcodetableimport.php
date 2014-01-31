@@ -5,7 +5,7 @@ require_once 'CRM/Core/Page.php';
 class CRM_Postalcode_Page_Postalcodetableimport extends CRM_Core_Page {
   function run() {
     // Example: Set the page-title dynamically; alternatively, declare a static title in xml/Menu/*.xml
-    CRM_Utils_System::setTitle(ts('Postalcode table import'));
+    CRM_Utils_System::setTitle(ts('Postcode.nl DTM Postalcode table import'));
 
 	$file_pctable = dirname(__FILE__).'/../../../verkleinde_postcode_tabel.txt';
 	
@@ -16,7 +16,8 @@ class CRM_Postalcode_Page_Postalcodetableimport extends CRM_Core_Page {
 		 * First backup existing table, then create new table
 		 * 
 		 * @todo On install of the module, check if the table already exists by some other module
-		 * @todo On import check if the table exists & have access to it, otherwise we get an error on renaming...
+		 * @todo On import check if the table exists & check access to table, otherwise we will get an error on renaming...
+		 * @todo On uninstall of module remove table from database
 		 */
 		
 		$qRenameTable_pc = "RENAME TABLE nl_pum_postalcodes TO nl_pum_postalcodes_".$dtstamp;
@@ -37,6 +38,7 @@ class CRM_Postalcode_Page_Postalcodetableimport extends CRM_Core_Page {
 		 * 
 		 */
 		 
+	 
 		$i = 0;
 		$rows = 0;
 		while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
@@ -44,11 +46,10 @@ class CRM_Postalcode_Page_Postalcodetableimport extends CRM_Core_Page {
 				$i++;
 				continue;	//We have to skip the first line
 			}
-						
-			
+
 			$num = count($data);
 			
-			echo "<p> $num fields in line $i: <br /></p>\n";
+			echo "<p> ".$num." fields in line ".$i.": <br /></p>\n";
 			
 			for ($k = 0; $k < $num; $k++) {
 				echo $data[$k] . "<br />\n";
